@@ -1,2 +1,2 @@
-# example webside codebase
+# example website codebase
 A simple website
