@@ -9,7 +9,21 @@
 
 **A static website supposed to run as a docker container!**
 
+```
+git clone https://github.com/BINPIPE/static-site-docker.git
+cd static-site-docker
+chmod +x wrapper.sh
+```
 
+```script
+docker build --tag binpipe/static-site-docker:1.0 .
+
+```
+
+```docker run -p 8888:80 binpipe/static-site-docker:1.0```
+
+
+```Open browser to http://IP-Address-of-Docker-Server:8888/```
 
 <pre>
 <a href="https://www.binpipe.org">BINPIPE</a> aims to simplify learning for those who are looking to make a foothold in the industry.
