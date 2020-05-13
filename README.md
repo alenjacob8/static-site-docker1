@@ -7,7 +7,7 @@
 [![BINPIPE](https://img.shields.io/badge/Live--Classroom-blue)](https://forms.gle/tDJxDyj2nJyfsgsk7)
 ---
 
-**A static website supposed to run as a docker container!**
+**A static website supposed to run as a docker container! (Manual Steps)**
 
 ```
 git clone https://github.com/BINPIPE/static-site-docker.git
@@ -24,6 +24,19 @@ docker build --tag binpipe/static-site-docker:1.0 .
 
 
 ```Open browser to http://IP-Address-of-Docker-Server:8888/```
+
+
+**A static website supposed to run as a docker container! (Run Via Jenkins Freestyle Job)**
+
+Follow the tutorial video to get the configuration done. Essentially, the following steps are to be followed:
+
+1. Define the github repo url/credentials in the Jenkins Freestyle Job.
+2. In the build phase select the `shell script` option and run the `jenkins-cicd.sh` script as below.
+3.  ```
+    chmod +x jenkins-cicd.sh
+    bash jenkins-cicd.sh
+    ```
+4. Save the job and execute the build. Follow the execution via console logs.
 
 <pre>
 <a href="https://www.binpipe.org">BINPIPE</a> aims to simplify learning for those who are looking to make a foothold in the industry.
