@@ -17,13 +17,10 @@ chmod +x wrapper.sh
 
 ```script
 docker build --tag binpipe/static-site-docker:1.0 .
-
+docker run -p 8888:80 binpipe/static-site-docker:1.0
 ```
 
-```docker run -p 8888:80 binpipe/static-site-docker:1.0```
-
-
-```Open browser to http://IP-Address-of-Docker-Server:8888/```
+Open browser at `http://IP-Address-of-Docker-Server:8888/` to view the website.
 
 
 **A static website supposed to run as a docker container! (Run Via Jenkins Freestyle Job)**
