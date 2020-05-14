@@ -10,7 +10,6 @@ echo "*******-Starting CI CD Pipeline Tasks-*******"
 echo ""
 echo "..... Build Phase Started :: Compiling Source Code :: ......"
 #compilation not needed here as code is html 
-cd static-site-docker
 
 #-BUILD (TEST)
 echo ""
