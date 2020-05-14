@@ -23,28 +23,28 @@ echo "Completed!"
 
 echo ""
 echo "..... Integration Phase Started :: Copying Artifacts :: ......"
-sudo chmod +x wrapper.sh
+chmod +x wrapper.sh
 echo ""
 echo "..... Provisioning Phase Started :: Building Docker Container :: ......"
-sudo docker build --tag binpipe/static-site-docker .
+docker build --tag binpipe/static-site-docker .
 #if there is a public docker repository push it to public repo here-
 #sudo docker push binpipe/static-site-docker
 
 
 #-POSTBUILD (PROVISIONING DEPLOYMENT)
 CONTAINER=static-site-docker
-RUNNING=$(sudo docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
+RUNNING=$(docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
 
 if [ $? -eq 1 ]; then
   echo "'$CONTAINER' does not exist."
 else
-  sudo docker rm -f $CONTAINER
+  docker rm -f $CONTAINER
 fi
 
     # run your container
     echo ""
 	echo "..... Deployment Phase Started :: Building Docker Container :: ......"
-	sudo docker run -d -p 8888:80 --name static-site-docker static-site-docker
+	docker run -d -p 8888:80 --name static-site-docker static-site-docker
 
 
 #-Completion
