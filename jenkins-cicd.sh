@@ -44,7 +44,7 @@ fi
     # run your container
     echo ""
 	echo "..... Deployment Phase Started :: Building Docker Container :: ......"
-	docker run -d -p 8888:80 --name static-site-docker static-site-docker
+	docker run -d -p 8888:80 binpipe/static-site-docker:latest
 
 
 #-Completion
